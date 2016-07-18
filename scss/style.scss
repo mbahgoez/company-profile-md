@@ -1,0 +1,169 @@
+$orange:#ffc107;
+
+body {
+	font-family:"Roboto";
+	background:#f8f8f8;
+}
+* {
+	margin:0;
+	padding:0;
+}
+
+section.top-bar {
+	background:#ffb300;
+	color:#fff;
+	width:100%;
+	padding:10px 0;
+	z-index:1;
+	span.welcome {
+		font-family: 'Roboto';
+		font-weight: 600;
+	}
+	span.delivery {
+		float:left;
+		margin-left:20%;
+		b {
+			margin:0 10px;
+		}
+	}
+	div.network {
+		display: block;
+		float:right;
+		margin:0;
+		padding:0;
+		list-style: none;
+		div.item {
+			display:inline-block;
+			margin:0;
+			padding:0;
+			a {
+				margin:0;
+				color:#fff;
+				display:block;
+				padding:0 10px;
+			}
+		}
+	}
+}
+
+header {
+	background:#ffc107;
+	z-index:3;
+	padding:20px 20px;
+	box-shadow: 0px 1px 5px 0px rgba(105, 104, 104, 0.14);
+	.brand {
+		h1 {
+			font-size:30px;
+			color:#fff;
+			margin:0;
+			i.icon {
+				font-size:35px;
+				margin-right:20px;
+			}
+		}
+	}
+	.search {
+		button {
+			float:right;
+			display:block;
+			font-size:30px;
+			color:#fff;
+			border:none;
+			background:transparent;
+			&:focus {
+				outline:none;
+			}
+		}
+	}
+}
+
+.clear::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+nav.tabs {
+	background:#fff;
+	width:100%;
+	box-shadow: 0px 0px 6px 0px rgba(105, 104, 104, 0.14);
+	z-index:2;
+	&:after {
+		clear:both;
+		display:block;
+		content:"";
+	}
+	ul {
+		float:right;
+		margin:0;
+		li {
+			list-style: none;
+			display:inline-block;
+			
+			&:after {
+				content:"";
+				width:100%;
+				height:3px;
+				display: block;
+			}
+			&:hover {
+				&:after {
+					background:#eee;
+				}
+			}
+			&.active:after {
+					background: $orange;
+			}
+			a {
+				font-family:'Roboto';
+				font-weight: 300;
+				color:$orange;
+				display:block;
+				padding:10px 20px;
+				font-size:16px;
+				
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		
+	}
+}
+
+div.slides {
+	z-index: 1;
+	width:100%;
+	height:514px;
+	overflow:hidden;
+	position: relative;
+	div.slide {
+		position: absolute;
+		top:0;
+		height:100%;
+		width:100%;
+		box-shadow: 0px 0px 6px 0px rgba(105, 104, 104, 0.14);
+		background-image:url("../image/bg-slide.jpg");
+		padding:180px;
+		
+		h2 {
+			text-align:center;
+			color:#fff;
+			font-size:60px;
+		}
+		p{
+			font-weight: 100;
+			color:#fff;
+			font-size:30px;
+			text-align:center;
+		}
+	}
+}
+
+div.card {
+	min-height:300px;
+	background:#fff;
+	width:90%;
+	margin:40px auto;
+	box-shadow: 0px 0px 6px 0px rgba(105, 104, 104, 0.14);
+}
