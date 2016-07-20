@@ -104,15 +104,37 @@ header {
         }
     }
     .search {
-        button {
-            float: right;
-            display: block;
-            font-size: 30px;
-            color: #fff;
-            border: none;
-            background: transparent;
-            &:focus {
+    	@include clearfix;
+        #input-search {
+        	width: 80%;
+        	float:left;
+            input {
+                background: transparent;
+                border: none;
+                width:100%;
+                box-shadow: 0 3px 0 0 $orangeactive;
                 outline: none;
+                padding: 8px 5px;
+                color: #fff;
+                &::-webkit-input-placeholder {
+                    color: darken($orangeactive, 20%);
+                    font-weight: 300;
+                }
+            }
+        }
+        #button-search {
+        	width: 20%;
+        	float:left;
+            button {
+                float: right;
+                display: block;
+                font-size: 30px;
+                color: #fff;
+                border: none;
+                background: transparent;
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }
@@ -198,13 +220,13 @@ div.card {
     width: 100%;
     margin: 40px auto;
     @include shadow1;
-    transition:all .3s ease;
+    transition: all .3s ease;
     &.full {
         width: 100%;
         margin: -10px auto;
     }
     &.map {
-    	margin-top:0;
+        margin-top: 0;
     }
 }
 
@@ -342,14 +364,14 @@ div#list-menu-makanan {
         color: #555;
     }
     &.aneka-menu {
-    	width:100%;
-    	margin-top:-10px;
+        width: 100%;
+        margin-top: -10px;
     }
     &.grid {
-    	padding: 10px;
+        padding: 10px;
         background: transparent;
         box-shadow: none;
-        width:100%;
+        width: 100%;
         ul {
             list-style-type: none;
             @include clearfix;
@@ -365,15 +387,15 @@ div#list-menu-makanan {
                 }
                 div.image {
                     width: 100%;
-                    height:143px;
-                    overflow:hidden;
+                    height: 143px;
+                    overflow: hidden;
                     img {
                         width: 100%;
                     }
                 }
                 div.description {
                     padding: 10px;
-                    padding-left:14px;
+                    padding-left: 14px;
                     width: 100%;
                     h4 {
                         margin-bottom: 5px;
@@ -390,8 +412,8 @@ div#list-menu-makanan {
         }
     }
     &.list {
-    	background:#fff;
-    	width:100%;
+        background: #fff;
+        width: 100%;
         ul {
             list-style-type: none;
             li {
@@ -433,14 +455,14 @@ div#list-menu-makanan {
         }
     }
     a.btn-more {
-    	background:#12A7F4;
-    	color:#fff;
-    	font-weight: 900;
-    	float:right;
-    	display: block;
-    	@include shadow1;
-    	padding:15px 30px;
-    	text-decoration: none;
+        background: #12A7F4;
+        color: #fff;
+        font-weight: 900;
+        float: right;
+        display: block;
+        @include shadow1;
+        padding: 15px 30px;
+        text-decoration: none;
     }
 }
 
@@ -477,7 +499,7 @@ div#list-menu-makanan {
                     background: $orangeactive;
                 }
                 &.active {
-                    background:$orangeactive;
+                    background: $orangeactive;
                 }
             }
         }
@@ -519,42 +541,148 @@ ul#list-contact {
 }
 
 .map ul.list {
-	list-style-type: none;
-	li {
-		padding:10px 20px;
-		display: block;
-		&.location {
-			background:$orangeactive;
-			color:#fff;
-			font-weight: 100;
-			font-size:20px;
-			i {
-				color:#fff;
-				float:right;
-				margin-right: 0;
-				position: relative;
-				top:-4px;
-			}
-		}
-		&:hover {
-			background:#f8f8f8;
-			&.location {
-				background:$orangeactive;
-			}
-		}
-		i {
-			display: inline-block;
-			margin-right:20px;
-			font-size:25px;
-			color:#777;
-		}
-		span {
-			font-weight: 300;
-			display: inline-block;
-			top:-5px;
-			position: relative;
-			color:#999;
-		}
-	}
+    list-style-type: none;
+    li {
+        padding: 10px 20px;
+        display: block;
+        &.location {
+            background: $orangeactive;
+            color: #fff;
+            font-weight: 100;
+            font-size: 20px;
+            i {
+                color: #fff;
+                float: right;
+                margin-right: 0;
+                position: relative;
+                top: -4px;
+            }
+        }
+        &:hover {
+            background: #f8f8f8;
+            &.location {
+                background: $orangeactive;
+            }
+        }
+        i {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 25px;
+            color: #777;
+        }
+        span {
+            font-weight: 300;
+            display: inline-block;
+            top: -5px;
+            position: relative;
+            color: #999;
+        }
+    }
 }
 
+#testimoni {
+    padding: 60px;
+    h2 {
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    p {
+        color: #999;
+        font-size: 18px;
+    }
+    .list-testimoni {
+        ul {
+            list-style-type: none;
+            li {
+                padding: 20px;
+                display: block;
+                border-bottom: 1px solid #eee;
+                &:last-child {
+                    border-bottom: none;
+                }
+                @include clearfix;
+                div.avatar,
+                div.comment {
+                    float: left;
+                }
+                div.avatar {
+                    width: 10%;
+                    font-size: 30px;
+                    text-align: center;
+                    i {
+                        display: inline-block;
+                        position: relative;
+                        top: 10px;
+                    }
+                }
+                div.comment {
+                    width: 70%;
+                    h4 {
+                        margin: 5px 0;
+                    }
+                    p {
+                        font-size: 16px;
+                        color: #888;
+                    }
+                }
+            }
+        }
+    }
+    .attention {
+        border: 1px solid $orange;
+        background: #FFF995;
+        padding: 20px 30px;
+        border-radius: 10px;
+        margin: 40px 0;
+        position: relative;
+        p {
+            color: #555;
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+        i.icon.ion-alert {
+            font-size: 30px;
+            color: $orange;
+            position: absolute;
+            top: 6px;
+            right: 40px;
+            display: inline-block;
+        }
+    }
+    .form-comment {
+        margin: 10px 0;
+        @include clearfix;
+        label {
+            margin-top: 10px;
+            display: block;
+            color: #555;
+            font-weight: 600;
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px 18px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            margin: 5px 0;
+            &:focus {
+                outline: none;
+                // border:1px solid $orangeactive;
+                background: #fafafa;
+            }
+        }
+        button.submit-comment {
+            background: #12A7F4;
+            color: #fff;
+            font-weight: 800;
+            float: right;
+            display: block;
+            @include shadow1;
+            padding: 15px 30px;
+            text-decoration: none;
+            border: none;
+            text-transform: uppercase;
+            border-radius: 3px;
+        }
+    }
+}

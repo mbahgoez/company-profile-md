@@ -20,7 +20,7 @@
 					</span>
                 </div>
                 <div class="col-lg-4 col-lg-push-2 clear">
-                    <span class="delivery">
+                    <span class="delivery" title="Hubungi untuk pemesanan">
 						<i class="icon ion-ios-telephone"></i>
 						<b>Pesan Antar</b> (0361) 780-5090
 					</span>
@@ -39,8 +39,15 @@
                 <div class="brand col-lg-6">
                     <h1><i class="icon ion-android-restaurant"></i>WarungMakan</h1>
                 </div>
-                <div class="search col-lg-6">
-                    <button title="Klik untuk melakukan Pencarian"><i class="icon ion-android-search"></i></button>
+                <div class="search col-lg-4 col-lg-push-2">
+                    <div id="input-search" title="Masukan Kata Kunci">
+                        <input type="search" id="input-search" placeholder="Masukan sebuah kata kunci...">
+                    </div>
+                    <div id="button-search" title="Klik untuk melakukan Pencarian">
+                        <button>
+                            <i class="icon ion-android-search"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             <!-- row -->
@@ -170,13 +177,16 @@
                                 </div>
                             </div>
                         </li>
-                       
                     </ul>
-                    <a href="" class="btn-more">LIHAT LAINNYA</a>
-                </div><!-- card -->
-            </div><!-- col-lg-2 -->
-        </div><!-- row -->
-    </div><!-- container -->
+                    <a href="aneka-menu.html" class="btn-more" title="Klik untuk melihat selengkapnya">LIHAT LAINNYA</a>
+                </div>
+                <!-- card -->
+            </div>
+            <!-- col-lg-2 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
